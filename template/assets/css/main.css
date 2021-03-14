@@ -149,7 +149,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -220,7 +220,7 @@
 	blockquote {
 		border-left: solid 4px;
 		font-style: italic;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 		padding: 0.5em 0 0.5em 2em;
 	}
 
@@ -237,7 +237,7 @@
 		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 	}
 
 		pre code {
@@ -453,7 +453,7 @@
 /* Form */
 
 	form {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 	}
 
 	label {
@@ -770,7 +770,7 @@
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 			width: 100%;
 		}
 
@@ -792,7 +792,7 @@
 
 	ol {
 		list-style: decimal;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 		padding-left: 1.25em;
 	}
 
@@ -802,7 +802,7 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 		padding-left: 1em;
 	}
 
@@ -910,7 +910,7 @@
 			@media screen and (max-width: 480px) {
 
 				ul.actions {
-					margin: 0 0 2em 0;
+					margin: 0 0 2em 0; /* used to be 0 0 2em 0 */
 				}
 
 					ul.actions li {
@@ -940,7 +940,7 @@
 			}
 
 	dl {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 	}
 
 		dl dt {
@@ -965,7 +965,7 @@
 	}
 
 	table {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0; /* used to be 0 0 2em 0 */
 		width: 100%;
 	}
 
@@ -1056,9 +1056,9 @@
 		.item header {
 			border-top-left-radius: 4px;
 			border-top-right-radius: 4px;
-			margin: -3em 0 3em -3em;
+			margin: -3em 0 1em -3em; /* used to be -3em -0 3em -3em */
 			width: calc(100% + 6em);
-			height: 15em;
+			height: 10em; /* used to be 15 em */
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -1077,6 +1077,14 @@
 			overflow: hidden;
 		}
 
+		.item p {
+		    text-align: justify;
+		    text-justify: inter-word;
+		    margin-bottom: 0.5em;
+		    min-height: 9em;
+
+		}
+		
 			.item header input, .item header select, .item header textarea {
 				color: #ffffff;
 			}
@@ -1172,14 +1180,18 @@
 	}
 
 		.items .item {
-			margin: 2em 0 0 2em;
+			margin: 2em 0 0 2em; /* used to be 2em 0 0 2em */
 			width: calc(50% - 2em);
 		}
 
 	@media screen and (max-width: 980px) {
 
 		.item header {
-			height: 25em;
+			height: 10em; /* used to be 25em */
+		}
+
+		.item p {
+		    min-height: 7em;
 		}
 
 		.items {
@@ -1195,9 +1207,10 @@
 			margin: 0;
 		}
 
+
 			.items .item {
 				width: 100%;
-				margin: 0 0 2em 0;
+				margin: 0 0 2em 0; /* used to be 0 0 2em 0 */
 			}
 
 				.items .item:last-child {
@@ -1209,7 +1222,7 @@
 	@media screen and (max-width: 736px) {
 
 		.item header {
-			height: 15em;
+			height: 10em; /* used to be 15em */
 		}
 
 		.items .item {
@@ -1225,7 +1238,7 @@
 		}
 
 			.item header {
-				height: 12em;
+				height: 8em; /* used to be 12em */
 				margin: -2em 0 2em -1em;
 				width: calc(100% + 2em);
 			}
@@ -1238,7 +1251,7 @@
 		width: 64em;
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
-		padding: 4em 0 2em 0;
+		padding: 2em 0 1em 0; /* used to be 4em 0 2em0 */
 	}
 
 		#wrapper > .main {
@@ -1292,9 +1305,9 @@
 		-ms-flex-direction: column;
 		flex-direction: column;
 		padding: 8em 0 6em 0;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/banner-so-we-must-think-cropped.jpg");
 		background-size: cover;
-		background-position: center;
+		background-position: center top; /* used to be just 'center' */
 		background-attachment: fixed;
 		text-align: center;
 		position: relative;
@@ -1356,8 +1369,8 @@
 		}
 
 		#header.alt {
-			height: 20em;
-			min-height: 20em;
+			height: 22em; /* used to be 20em */
+			min-height: 22em;
 			min-height: 75vh;
 		}
 
@@ -1414,6 +1427,15 @@
 
 		}
 
+		@media screen and (max-width: 980px) {
+
+		    #header.alt {
+			height: 25em; /* preivously didn't have a rule here, and main rule used to be 20em */
+			min-height: 25em;
+			min-height: 75vh;
+		    }
+		}
+		
 		@media screen and (max-width: 736px) {
 
 			#header {
