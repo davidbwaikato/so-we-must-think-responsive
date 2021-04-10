@@ -1368,6 +1368,16 @@
 			z-index: 1;
 		}
 
+		#header div.inner {
+		    width: 40em;
+		    margin: auto; background-color: rgba(0,0,0,0.7);
+		}
+
+		#header .inner p {
+		    text-align: justify; text-justify: inter-word; margin-bottom: 0.5em;
+		}
+		
+
 		#header.alt {
 			height: 22em; /* used to be 20em */
 			min-height: 22em;
@@ -1449,12 +1459,24 @@
 				}
 
 				#header.alt p {
-					padding: 0;
+					padding: 0.6em; /* used to be 0 */
 				}
 
 				#header.alt .inner {
 					max-width: 20em;
 				}
+
+				/*
+				#header.alt div.inner {
+				    margin: auto; background-color: rgba(0,0,0,0.7);
+				}
+			       */
+				/*
+				#header.alt .inner p {
+				    text-align: justify; text-justify: inter-word; margin-bottom: 0.5em;
+				}
+				*/
+				
 
 		}
 
